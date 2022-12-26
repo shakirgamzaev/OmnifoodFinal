@@ -1,0 +1,2195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* font size: 1 rem = 10px*/
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "lato", sans-serif;
+    background-color: #F7F4E4;
+    /* max-width: 1600px; */
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+header{
+    position: sticky;
+}
+
+header .headerBar{
+    padding: 3rem 5rem;
+    padding-bottom: 3rem;
+    background-color: #F7F4E4;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    opacity: 0.98;
+    margin: 0 auto;
+    top: 0px;
+}
+
+header ion-icon{
+    display: none;
+}
+
+header img {
+    height: 2.2rem;
+}
+
+
+header li {
+    list-style: none;
+}
+
+
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+
+header a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    font-weight: 700;
+}
+
+header ul li:nth-child(5) a {
+    padding: 0.8rem 2.5rem;
+    background-color: rgb(255, 122, 13);
+    border-radius: 1rem;
+    color: white;
+}
+
+header ul li:nth-child(5) a:hover {
+    color: white;
+}
+
+
+footer {
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    width: 100%;
+    background-color: white;
+}
+
+footer img {
+    width: calc(20rem + 3vw);
+}
+
+
+
+
+
+
+
+
+/* classes*/
+
+
+.section1{
+    width: 85%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 7rem;
+    gap: 4vw;
+    align-items: flex-start;
+    padding-bottom: 7rem;
+}
+
+
+
+.btn-header {
+    transition: all 0.12s;
+}
+
+
+.btn-header:hover {
+    filter: brightness(90%);
+    color: rgb(255, 122, 13);
+}
+
+
+.openCloseIcons{
+   display: none;
+
+}
+
+
+.firstSection {
+    display: flex;
+    /* padding: 12rem 9rem; */
+    width: 90%;
+    padding-top: 0;
+    align-items: center;
+    gap: 4rem;
+    background-color: rgb(248, 244, 229);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    padding-bottom: 10rem;
+}
+
+
+
+.firstSection p {
+    font-size: calc(0.7rem + 1vw);
+    line-height: 3rem;
+    letter-spacing: 0.1rem;
+}
+
+.firstSection h1 {
+    font-size: calc(2.5rem + 1.8vw);
+    font-weight: 900;
+}
+
+
+
+.firstSectionBtns{
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.firstSectionBtns a{
+    font-size: calc(0.9rem + 1.1vw);
+    display: inline-block;
+    padding: 1.3rem 2.8rem;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 1rem;
+    color: #484848;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.customersImgs {
+
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.customersImgs img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-left: -1.8rem;
+}
+
+.customersImgs p {
+    font-weight: 900;
+    font-size: calc(0.4rem + 0.6vw);
+}
+
+
+.secondSection {
+    height: 30rem;
+}
+
+
+.featured {
+    margin-top: 8rem;
+    background-color: white;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+}
+
+.featuredContainer {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.featured h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: grey;
+}
+
+.featured img {
+    height: 3.5rem;
+    filter: brightness(0);
+    opacity: 0.5;
+    animation-name: logoScroll;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.featured .imageContainer {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    padding: 0 2.5rem;
+}
+
+.HowItWorks,
+.meals {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.Apps {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    row-gap: 13rem;
+}
+
+.Apps .child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vw;
+
+}
+
+.Apps .child div {
+    width: 75%;
+}
+
+.Apps .child .imageDiv {
+    width: 23%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+.Apps .child img {
+    height: calc(25rem + 10vw);
+    position: relative;
+    z-index: 3;
+}
+
+
+
+.Apps .child h1 {
+    font-size: 9rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    opacity: 0.2;
+}
+
+.Apps .child h2 {
+    font-size: 3rem;
+}
+
+
+
+.Apps p {
+    margin-top: 4rem;
+    font-size: 2rem;
+    line-height: 4rem;
+}
+
+
+
+.Apps .child:nth-child(2) .imageDiv {
+    /* position: relative; */
+    order: -1;
+}
+
+.Apps .child .imageDiv::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 230px;
+    z-index: 2;
+    height: 230px;
+    /* padding-bottom: 100%; */
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #F9E5D3;
+    display: block;
+}
+
+.Apps .child .imageDiv::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #F7F4E4;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+/* #F9E5D3 color for ::after imageDiv element*/
+
+.meals {
+    padding-top: 14rem;
+    padding-bottom: 100px;
+}
+
+.meals h1,
+.meals h3 {
+    text-align: center;
+}
+
+.meals h3 {
+    color: rgb(255, 72, 0);
+    font-size: calc(0.9rem + 0.6vw);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.meals h1 {
+    font-size: calc(2.6rem + 1vw);
+    font-weight: 900;
+    margin-bottom: 11rem;
+
+}
+
+
+.mealsContainer {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+
+}
+
+.mealsContainer p {
+    font-size: calc(1.3rem + 0.5vw);
+    display: inline-block;
+}
+
+.mealsContainer p span {
+    font-weight: 700;
+}
+
+.mealsContainer .vegetarian {
+    background-color: #51CE66;
+    padding: 0.4rem;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: calc(0.9rem + 0.4rem);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+ion-icon {
+    font-size: 3.2rem;
+    color: rgb(255, 128, 0);
+}
+
+.ionIconDiv {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 8%;
+}
+
+.mealsContainer h2 {
+    font-size: calc(1.4rem + 1vw);
+    margin-bottom: 2.4rem;
+}
+
+.mealsContainer li {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+
+.mealCard {
+    padding: 2vw;
+}
+
+.mealsSection {
+    box-shadow: 1rem 1rem 3rem 1rem rgba(0, 0, 0, 0.08);
+    border-radius: 9px;
+    transition: transform 0.35s;
+}
+
+.mealsSection:hover {
+    transform: translateY(-1rem);
+}
+
+.testimonials {
+    width: 100%;
+}
+
+.testimonialContainer {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-top: 8rem;
+    gap: 4vw;
+
+
+}
+
+.testimonials .testimonialImgs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 47%;
+    align-self: flex-start;
+}
+
+.testimonialImgs .gallery-item {
+    width: 100%;
+    overflow: hidden;
+}
+
+.testimonials .testimonialImgs img {
+    width: 100%;
+    transition: all 0.3s;
+
+}
+
+.testimonials .testimonialImgs img:hover {
+    transform: scale(1.1);
+}
+
+
+.testimonialsTitle h2 {
+    color: #e47d23;
+    text-transform: uppercase;
+    font-size: calc(0.8rem + 0.6vw);
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+}
+
+.testimonialsTitle h1 {
+    font-size: calc(3rem + 0.9vw);
+    font-weight: 900;
+    margin-bottom: 9rem;
+}
+
+.customer p {
+    font-size: calc(0.8rem + 0.7vw);
+    line-height: 3.5rem;
+}
+
+.customer img {
+    border-radius: 50%;
+    width: calc(6rem + 1vw);
+    margin-bottom: 2rem;
+}
+
+.customer .name {
+    font-size: calc(0.6rem + 0.7vw);
+    margin-top: 2rem;
+}
+
+
+.customersContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3vw;
+    row-gap: 3vw;
+}
+
+
+.ending {
+    margin-top: 5rem;
+    width: 100%;
+    background-color: white;
+    padding-bottom: 20rem;
+    border-bottom: 0.1rem solid rgba(65, 62, 62, 0.376);
+}
+
+.endingContainer {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10rem;
+}
+
+.endingContainer h2 {
+    font-size: calc(1rem + 0.5vw);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: #e47d23;
+}
+
+.endingContainer h1 {
+    font-size: calc(2.6rem + 0.8vw);
+    margin-bottom: 4rem;
+}
+
+.cards p {
+    font-size: calc(0.95rem + 0.7vw);
+}
+
+.ending .ionIconDiv {
+    gap: 2rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.card {
+    border: 0.25rem solid #FDF1E9;
+    border-radius: 0.9rem;
+    padding: 3.7rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card p {
+    font-size: calc(0.6rem + 0.5vw);
+    margin-bottom: 4rem;
+    margin-top: 1.6rem;
+    color: #6F6F6F;
+}
+
+.cards .card:nth-child(2) {
+    background-color: #FDF1E9;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+.cards .card:nth-child(2)::after {
+    content: "Best Value";
+    position: absolute;
+    top: 6%;
+    left: 53%;
+    padding: calc(0.6rem + 0.4vw) calc(2.4rem + 0.4vw);
+    background-color: #FFD43B;
+    font-size: calc(0.5rem + 0.5vw);
+    transform: rotateZ(45deg);
+    font-weight: 900;
+    width: 12rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card h1 {
+    margin-bottom: 1rem;
+    font-size: calc(0.83rem + 0.7vw);
+    color: #c06b20;
+}
+
+.card .price {
+    color: black;
+    font-size: calc(5rem + 0.8vw);
+    font-weight: 900;
+}
+
+.card .price i {
+    font-style: normal;
+    font-size: calc(2rem + 1vw);
+    font-weight: 700;
+}
+
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+
+}
+
+.ending .ionIconDiv p {
+    margin: 0;
+    font-size: calc(0.5rem + 0.8vw);
+    color: black;
+}
+
+.card a {
+    padding: calc(0.8rem + 0.5vw) calc(1.8rem + 0.5vw);
+    background-color: #f58c2f;
+    border-radius: 0.9rem;
+    width: 80%;
+    text-align: center;
+    margin-top: 4rem;
+    color: white;
+    font-size: calc(0.9rem + 0.5vw);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.card a:hover {
+    background-color: #d77f2c;
+}
+
+
+.endingIcons li {
+    list-style: none;
+}
+
+.endingIcons ion-icon {
+    font-size: 3.4rem;
+}
+
+.endingIcons p {
+    font-size: calc(1.41rem + 0.4vw);
+    color: #484848;
+}
+
+.endingIcons h2 {
+    font-size: calc(2rem + 0.53vw);
+    color: black;
+    margin-bottom: 1.7rem;
+    margin-top: 2.4rem;
+    text-transform: none;
+}
+
+.endingIcons {
+    margin-top: 13rem;
+    padding-bottom: 16rem;
+}
+
+.endingIcons .IconCircleBackground {
+    background-color: #FDF1E9;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 1.5rem;
+}
+
+.endingIcons ul {
+    display: flex;
+    justify-content: space-between;
+    gap: calc(3.3rem + 0.3vw)
+}
+
+.SignUp {
+    background-color: #E98C3C;
+    /* padding: calc(4.5rem + 0.35vw); */
+    display: flex;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 5rem 5rem 10rem 0rem rgba(0, 0, 0, 0.224);
+}
+
+
+.SignUp h1 {
+    font-size: calc(4.4rem + 0.4vw);
+}
+
+.SignUp p {
+    font-size: calc(1.2rem + 0.4vw);
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.SignUp .left {
+    width: 67%;
+    padding: calc(4.5rem + 0.35vw);
+}
+
+.SignUp .right {
+    background-image: linear-gradient(to right bottom, rgba(244, 175, 47, 0.45), rgba(223, 119, 22, 0.35)), url("images/eating.jpeg");
+    width: 33%;
+    background-size: cover;
+    background-position: top 30% left 10%;
+
+
+}
+
+.SignUp label {
+    font-size: calc(1.2rem + 0.4vw);
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.SignUp form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.3rem;
+    font-family: inherit;
+}
+
+
+.SignUp input {
+    width: 100%;
+    text-align: start;
+
+}
+
+form input::placeholder {
+    font-family: inherit;
+    font-size: calc(1.4rem + 0.4vw);
+}
+
+.SignUp button {
+    padding: 1rem 4rem;
+    font-weight: 700;
+    font-size: calc(1.5rem + 0.5vw);
+    background-color: #45250B;
+    color: white;
+    transition: all 0.2s;
+}
+
+.SignUp button:hover {
+    background-color: white;
+    color: #45250B;
+    cursor: pointer;
+}
+
+.SignUp .formBtn {
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+    border: 0px none;
+    align-self: end;
+    width: 100%;
+    font-size: calc(1.4rem + 0.4vw);
+}
+
+
+.footerContainer {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    gap: 6rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footerContainer p {
+    font-size: calc(1rem + 0.4vw);
+}
+
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26%;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.footerInfo h2 {
+    font-size: calc(1.4rem + 0.4vw);
+    margin-bottom: 2rem;
+}
+
+.footerInfo a {
+    text-decoration: none;
+    color: #6F6F6F;
+    font-size: calc(1rem + 0.4vw);
+}
+
+.footerIcons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+
+
+}
+
+.footerIcons ion-icon {
+    color: #6F6F6F;
+    margin-top: 4rem;
+}
+
+.logos {
+    gap: 0;
+    width: 40%;
+}
+
+.logos p {
+    align-self: flex-end;
+    margin-top: 6rem;
+}
+
+/*Ids*/
+
+
+
+
+#firstSectionText h1{
+    font-size: calc(4.2rem + 0.6vw);
+    font-weight: 900;
+    /* margin-top: 8rem; */
+}
+
+#firstSectionInfoParagraph{
+    font-size: calc(0.9rem + 1vw);
+    line-height: 4rem;
+}
+
+
+
+#firstSectionText a:nth-child(2) {
+    background-color: rgb(255, 122, 13);
+    border-radius: 1rem;
+    color: white;
+    transition: all 0.12s;
+}
+
+#firstSectionText a:nth-child(3) {
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    color: rgb(48, 43, 43);
+    margin-left: 1rem;
+    transition: all 0.12s;
+
+}
+
+#firstSectionText a:nth-child(3):hover {
+    box-shadow: 0 0 0px 3px white;
+    background-color: rgb(224, 222, 222);
+}
+
+#firstSectionText a:nth-child(2):hover {
+    filter: brightness(90%);
+
+}
+
+
+#firstSectionText {
+    width: 55%;
+    animation-name: firstSectAnimText;
+    animation-timing-function: linear;
+    animation-duration: 0.7s;
+}
+
+#firstSectionImages {
+  
+    width: 55%;
+    animation-name: firstSectAnimImages;
+    animation-timing-function: linear;
+    animation-duration: 0.7s;
+}
+
+#NumMeals{
+    font-size: calc(0.7rem + 0.7vw);
+}
+
+
+#firstSectionImages img {
+    width: 100%;
+    height: auto;
+}
+
+#howItWorksTitle {
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+#howItWorksTitle h2 {
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    font-size: calc(1.3rem + 0.4vw);
+    text-transform: uppercase;
+    color: rgb(255, 77, 0);
+
+}
+
+#howItWorksTitle h1 {
+    font-size: calc(2.9rem + 0.8vw);
+    font-weight: 900;
+}
+
+
+
+#meals1,
+#meals2,
+#meals3 {
+    width: 33%;
+}
+
+
+#meals1 img,
+#meals2 img,
+#meals3 img {
+    border-radius: 9px;
+}
+
+
+#meals1 img {
+    width: 100%;
+}
+
+#meals2 img {
+    width: 100%;
+}
+
+#meals3 h1 {
+    font-size: calc(1.1rem + 1vw);
+    font-weight: 900;
+    color: #333333;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+#meals3 ion-icon {
+    font-size: calc(0.7rem + 2vw);
+}
+
+#meals3 p {
+    font-size: calc(0.7rem + 0.8vw);
+}
+
+#meals3 li {
+    margin-bottom: 1.33rem;
+}
+
+#vegan {
+    background-color: #94D82C;
+    margin-right: 0.5rem;
+}
+
+
+#seeAllRecipes {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    font-size: calc(1.1rem + 0.6vw);
+}
+
+#seeAllRecipes a {
+    text-decoration: none;
+    padding-bottom: 0.4rem;
+    box-shadow: 0 0.15rem 0rem #e47d23;
+    color: #e47d23;
+    transition: all 0.2s;
+}
+
+#seeAllRecipes a:hover {
+    box-shadow: none;
+    color: #c06b20;
+}
+
+
+
+#reviews {
+    width: 51%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*Animations  ***************************/
+
+
+@keyframes firstSectAnimImages {
+    0% {
+        opacity: 0;
+        transform: translate(200px, 0);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(-50px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+
+    }
+
+
+
+}
+
+
+@keyframes logoScroll {
+    0% {
+        transform: translate(0px, 0);
+
+    }
+
+    16.6% {
+        transform: translate(10px, 0);
+    }
+
+    33.2% {
+        transform: translate(20px, 0);
+
+    }
+
+    49.8% {
+        transform: translate(30px, 0);
+    }
+
+    66.4% {
+        transform: translate(20px, 0);
+
+
+    }
+
+    83% {
+
+        transform: translate(10px, 0);
+
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
+
+}
+
+
+@keyframes firstSectAnimText {
+    0% {
+        opacity: 0;
+        transform: translate(-200px, 0);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(50px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*******************************************/
+/********************/
+
+/* MEDIA QUERIES*/
+
+@media (min-width:2201px) {
+
+    body {
+        max-width: none;
+    }
+
+    header {
+        margin-bottom: 8rem;
+    }
+
+    header ul {
+        gap: 5rem;
+    }
+
+    header img {
+        height: 3.6rem;
+    }
+
+    header a {
+        font-size: 3.6rem;
+        /* width: 90%; */
+    }
+
+
+    .firstSection h1 {
+        font-size: 8.6rem;
+    }
+
+
+
+
+    .firstSection {
+        width: 90%;
+    }
+
+    .firstSection p {
+        font-size: 3rem;
+        line-height: 5rem;
+    }
+
+    .featured h3 {
+        font-size: 3rem;
+        margin-bottom: 8rem;
+    }
+
+
+    .featuredContainer {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    .firstSection a {
+        font-size: 4rem;
+        padding: 2rem 4rem;
+    }
+
+    .featured img {
+        height: 6rem;
+    }
+
+
+    #firstSectionText a:nth-child(2) {
+        margin-right: 3rem;
+    }
+
+    #firstSectionImages {
+        width: 110%;
+    }
+
+
+    
+
+   
+
+    .Apps p {
+        font-size: calc(2rem + 0.5vw);
+    }
+
+    .Apps .child h2 {
+        font-size: calc(3.2rem + 0.45vw);
+    }
+
+
+    #howItWorksTitle h1 {
+        font-size: calc(3.5rem + 1vw);
+    }
+
+    #howItWorksTitle h2 {
+        font-size: calc(1.1rem + 1vw);
+    }
+
+    .mealsContainer .vegetarian {
+        font-size: calc(1.2rem + 1vw);
+    }
+
+    .mealsContainer p {
+        font-size: calc(2rem + 1vw);
+    }
+
+    .mealsContainer h2 {
+        font-size: calc(2.8rem + 1vw);
+        margin: 5rem 0rem;
+    }
+
+    #meals3 p {
+        font-size: calc(1.4rem + 0.9vw);
+    }
+
+    #meals3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #meals3 h1 {
+        font-size: calc(2.7rem + 1vw);
+    }
+
+    #meals3 ul {
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        justify-content: space-between;
+    }
+
+    .meals h1 {
+        font-size: calc(3.4rem + 0.9vw);
+    }
+
+    .ending .ionIconDiv p {
+        font-size: calc(1.1rem + 1vw);
+    }
+
+    .ending ion-icon {
+        font-size: 5rem;
+    }
+
+    .ending h1 {
+        font-size: calc(2rem + 1vw);
+    }
+
+    .ending .price {
+        font-size: calc(9rem + 1vw);
+    }
+
+    .card a {
+        font-size: calc(1.6rem + 1vw);
+
+    }
+
+    .card p {
+        font-size: calc(1.2rem + 1vw)
+    }
+
+    .SignUp .formBtn {
+        font-size: calc(2rem + 1vw);
+        padding: 2.4rem;
+    }
+
+    form input::placeholder {
+        font-size: calc(1.4rem + 1vw);
+    }
+
+    .SignUp h1 {
+        font-size: calc(4rem + 1vw);
+    }
+
+    .SignUp p {
+        font-size: calc(1.4rem + 1vw);
+        margin-bottom: 8rem;
+    }
+
+}
+
+
+
+
+
+@media (min-width: 2000px) and (max-width: 2200px) {
+
+    body {
+        max-width: none;
+    }
+
+
+    header {
+        margin-bottom: 8rem;
+    }
+
+    header img {
+        height: 3.5rem;
+    }
+
+
+    header a {
+        font-size: 3.5rem;
+        /* width: 90%; */
+    }
+
+    .firstSection {
+        width: 90%;
+    }
+
+    .firstSection a {
+        font-size: 3.5rem;
+        padding: 2rem 4rem;
+    }
+
+    .firstSection h1 {
+        font-size: 6.7rem;
+    }
+
+    .firstSection p {
+        font-size: 3.2rem;
+        line-height: 5rem;
+    }
+
+
+    .featured img {
+        height: 5rem;
+    }
+
+
+    .featured h3 {
+        font-size: 3rem;
+        margin-bottom: 8rem;
+    }
+
+    .featuredContainer {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #firstSectionImages {
+        width: 110%;
+    }
+
+    #firstSectionText a:nth-child(2) {
+        margin-right: 3rem;
+    }
+
+    #NumMeals {
+        font-size: 2.7rem;
+    }
+
+    .logos p {
+        align-self: flex-start;
+    }
+
+    .Apps p {
+        font-size: calc(2rem + 0.5vw);
+    }
+
+    /* font-size: calc(3.2rem + 0.45vw); */
+    .Apps .child h2 {
+        font-size: calc(3.2rem + 0.45vw);
+    }
+
+    #howItWorksTitle h1 {
+        font-size: calc(3.5rem + 1vw);
+    }
+
+    #howItWorksTitle h2 {
+        font-size: calc(1.1rem + 1vw);
+    }
+
+    .mealsContainer .vegetarian {
+        font-size: calc(1.2rem + 1vw);
+    }
+
+    .mealsContainer p {
+        font-size: calc(1.4rem + 1vw);
+    }
+
+    .mealsContainer h2 {
+        font-size: calc(2.8rem + 1vw);
+        margin: 4rem 0rem;
+    }
+
+    #meals3 h1 {
+        font-size: calc(2.7rem + 1vw);
+    }
+
+    #meals3 ul {
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        justify-content: space-between;
+    }
+
+    #meals3 p {
+        font-size: calc(1.4rem + 0.9vw);
+    }
+
+    #meals3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .meals h1 {
+        font-size: calc(3.4rem + 0.9vw);
+    }
+
+    .ending .ionIconDiv p {
+        font-size: calc(1.1rem + 1vw);
+    }
+
+    .ending ion-icon {
+        font-size: 5rem;
+    }
+
+    .ending h1 {
+        font-size: calc(2rem + 1vw);
+    }
+
+    .ending .price {
+        font-size: calc(9rem + 1vw);
+    }
+
+    .card a {
+        font-size: calc(1.4rem + 1vw);
+
+    }
+
+    .card p {
+        font-size: calc(1.2rem + 1vw)
+    }
+
+
+    .SignUp .formBtn {
+        font-size: calc(2rem + 1vw);
+        padding: 2.4rem;
+    }
+
+    form input::placeholder {
+        font-size: calc(1.4rem + 1vw);
+    }
+
+    .SignUp h1 {
+        font-size: calc(4rem + 1vw);
+    }
+
+    .SignUp p {
+        font-size: calc(1.4rem + 1vw);
+        margin-bottom: 8rem;
+    }
+}
+
+
+
+/*** this MEDIA QUERRY MIN WIDTH WILL BE 1610px and Max Width will be 1999px*/
+
+@media (min-width: 1610px) and (max-width: 1999px) {
+
+    body {
+        width: 100%;
+    }
+
+    .featured {
+        width: 100%;
+    }
+
+    header a {
+        font-size: 3rem;
+    }
+
+    header img {
+        height: 3rem;
+    }
+
+
+    .firstSection {
+        width: 95%;
+    }
+
+    .firstSection h1 {
+        font-size: calc(2rem + 1.8vw);
+    }
+
+    .Apps p {
+        font-size: calc(2rem + 0.5vw);
+    }
+
+    .Apps .child h2 {
+        font-size: calc(3.2rem + 0.45vw);
+    }
+
+    .Apps .child img {
+        height: calc(40rem + 6vw);
+    }
+
+    .Apps .child .imageDiv::before {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .Apps .child .imageDiv::after {
+        width: 40rem;
+        height: 40rem;
+    }
+
+    #howItWorksTitle h1 {
+        font-size: calc(3.5rem + 1vw);
+    }
+
+    #howItWorksTitle h2 {
+        font-size: calc(1.1rem + 1vw);
+    }
+
+    .mealsContainer .vegetarian {
+        font-size: calc(1.2rem + 1vw);
+    }
+
+    .mealsContainer h2 {
+        font-size: calc(2rem + 1vw);
+        margin: 3rem 0;
+    }
+
+    .mealsContainer p {
+        font-size: calc(1.4rem + 1vw);
+    }
+
+
+    #meals3 h1 {
+        font-size: calc(2.7rem + 1vw);
+    }
+
+    #meals3 ul {
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        justify-content: space-between;
+    }
+
+    #meals3 p {
+        font-size: calc(1.4rem + 0.9vw);
+    }
+
+    #meals3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .meals h1 {
+        font-size: calc(3.4rem + 0.9vw);
+    }
+
+    .ending .ionIconDiv p {
+        font-size: calc(1.1rem + 1vw);
+    }
+
+    .ending ion-icon {
+        font-size: 5rem;
+    }
+
+    .ending h1 {
+        font-size: calc(2rem + 1vw);
+    }
+
+    .ending .price {
+        font-size: calc(9rem + 1vw);
+    }
+
+    .card a {
+        font-size: calc(1.2rem + 1vw);
+
+    }
+
+    .card p {
+        font-size: calc(1.2rem + 1vw)
+    }
+
+    .SignUp .formBtn {
+        font-size: calc(2rem + 1vw);
+        padding: 2.4rem;
+    }
+
+    form input::placeholder {
+        font-size: calc(1.4rem + 1vw);
+    }
+
+    .SignUp h1 {
+        font-size: calc(4rem + 1vw);
+    }
+
+    .SignUp p {
+        font-size: calc(1.4rem + 1vw);
+        margin-bottom: 8rem;
+    }
+
+}
+
+/******************************/
+/* 16px = 1rem  */
+
+
+@media (max-width: 81.25em) {
+
+    html {
+        font-size: 53%;
+    }
+
+    .testimonials .testimonialImgs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #reviews {
+        margin: auto 0;
+    }
+
+    .Apps .child img {
+        height: calc(23rem + 9vw);
+
+    }
+
+    .Apps .child .imageDiv::before {
+        width: 190px;
+        height: 190px;
+    }
+
+    .Apps .child .imageDiv::after {
+        width: 260px;
+        height: 260px;
+    }
+
+    #firstSectionText {
+        /* width: 210%; */
+    }
+}
+
+/* 1100px max width ******/
+/*** this is = 68.75em*/
+
+@media (max-width: 69em) {
+    html {
+        font-size: 47%;
+    }
+
+    header a{
+        font-size: 2.3rem;
+    }
+
+    .featured img {
+        height: 2.4rem;
+    }
+
+    .featured h3 {
+        font-size: 1.4rem;
+    }
+
+    .Apps .child .imageDiv::before {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .Apps .child .imageDiv::after {
+        width: 25.5rem;
+        height: 25.5rem;
+    }
+
+    .Apps .child h2 {
+        font-size: 2.9rem;
+    }
+
+    .Apps .child h1 {
+        font-size: 7.9rem;
+    }
+
+    .Apps .child img {
+        height: calc(15rem + 14vw);
+    }
+
+    .endingIcons h2 {
+        font-size: calc(1.65rem + 0.5vw);
+    }
+
+    .endingIcons ion-icon {
+        font-size: 2.6rem;
+    }
+
+    .endingIcons p {
+        font-size: calc(1.2rem + 0.4vw);
+
+    }
+
+    .SignUp h1 {
+        font-size: calc(3.8rem + 0.4vw);
+    }
+
+    footer img {
+        width: calc(16rem + 3vw);
+    }
+
+    .Apps p {
+        margin-top: 3.5rem;
+        font-size: 1.9rem;
+        line-height: 3.6rem;
+    }
+}
+
+
+/*** 890px ***/
+/* this is = 55.625*/
+
+@media (max-width: 55.62em)
+{
+    html{
+        font-size: 43%;
+    }
+    
+
+    header a{
+        font-size: 3.6rem;
+    }
+
+   
+    header img{
+        width: calc(20rem + 1vw);
+        height: auto;
+        display: block;
+    }
+    
+    .headerBar .headerNav{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        top: 0;
+        left: 0;
+        transform: translate(0%,0);
+        visibility: visible;
+        transition: all 0.5s ease-in-out;
+        pointer-events: auto;
+        opacity: 1;
+    }
+    
+    .headerBar .hidden{
+        visibility: hidden;
+        transform: translate(100%,0);
+    }
+
+    
+
+
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+        height: 100%;
+    }
+
+    header ion-icon{
+        font-size: calc(6rem + 1vw);
+        display: block;
+        color: black;
+    }
+
+    .headerBar .openCloseIcons 
+    {
+        display: flex;
+    }
+
+    #meals3 p{
+        font-size: calc(1.6rem + 0.5vw);
+    }
+
+
+    #meals3 ion-icon{
+        font-size: calc(3.4rem + 0.5vw);
+    }
+
+    .card{
+       flex-grow: 1;
+
+    }
+
+
+    .card a{
+        font-size: calc(1.6rem + 0.5vw);
+    }
+
+    .ending .ionIconDiv p {
+        
+        font-size: calc(1.2rem + 0.8vw);
+        
+    }
+
+    .card h1 {
+        font-size: calc(1.8rem + 0.7vw);
+    }
+
+    .card .price {
+        font-size: calc(6rem + 0.8vw);
+
+    }
+
+
+    .card p {
+        font-size: calc(1.3rem + 0.5vw);
+       
+        
+    }
+
+    .cards .card:nth-child(2)::after{
+        font-size: calc(1rem + 0.5vw);
+        top: calc(4% + 3vw);
+        left: calc(47% + 3.5vw);
+        width: 40%;
+        transform: rotateZ(45deg) translate(-0%,-50%);
+
+    }
+
+    .headerBar .openCloseIcons .hidden{
+        display: none;
+    }
+    
+    .section1{
+        flex-direction: column;
+    }
+
+
+    .customer p{
+        font-size: calc(1.6rem + 0.3vw);
+    }
+
+    .customer .name{
+        font-size: calc(1.3rem + 0.3vw);
+    }
+
+    .firstSection{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    #firstSectionImages{
+        align-self: center;
+        width: 70%;
+    }
+    #firstSectionText{
+        width: 85%;
+        align-self: center;
+    }
+
+    #firstSectionText h1
+    {
+        text-align: center;
+    }   
+
+    #firstSectionText p{
+        text-align: left;
+    }
+    
+    
+    .firstSectionBtns{
+        justify-content: center;
+    }
+    
+
+    #firstSectionText h1{
+        font-size: calc(2.5rem + 1.7vw);
+    }
+
+    .customersImgs{
+        justify-content: center;
+    }
+
+    .testimonialContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #reviews{
+        width: 100%;
+    }
+
+    .testimonials .testimonialImgs{
+        width: 100%;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    .SignUp form{
+        grid-template-columns: 1fr;
+
+    }
+
+    .SignUp .left{
+        width: 55%;
+    }
+
+    .SignUp .right{
+        width: 45%;
+    }
+
+    .SignUp p{
+        font-size: calc(1.5rem + 0.4vw);
+        line-height: 3rem;
+    }
+
+    #NumMeals{
+        font-size: 1.6rem;
+    }
+
+    #firstSectionInfoParagraph{
+        font-size: calc(1.8rem + 1vw);
+        line-height: 5rem;
+        text-align: left;
+    }
+
+    #firstSectionText h1 {
+        font-size: calc(2.9rem + 1.7vw);
+    }
+}
+
+
+
+
+
+/* 630px = 39.375em
+*******************/
+/****************
+******************
+*****************/
+
+
+
+@media (max-width:39.375em)
+{
+
+    html{
+        font-size: 39%;
+    }
+
+    .Apps .child .imageDiv::before {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .Apps .child .imageDiv::after {
+        width: 21rem;
+        height: 21rem;
+    }
+
+    .featured img {
+        height: 2rem;
+    }
+
+
+    .SignUp .right {
+        
+        background-position: top 40% left 30%;
+    }
+
+    .firstSectionBtns a {
+        font-size: calc(1.8rem + 1vw);
+        
+    }
+}
+
+
+
+
+/********************/
+/********************/
+/********************/
+/********************/
+/********************/
+/********************/
+/********* 510px = 31.875em*/
+
+@media (max-width:31.875em)
+{
+    .Apps{
+        width: 90%;
+    }
+
+    .Apps .child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5vw;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+
+    .Apps .child h2 {
+        font-size: 3.2rem;
+    }
+
+    #howItWorksTitle h1 {
+        font-size: calc(2.8rem + 0.8vw);
+        font-weight: 900;
+        text-align: center;
+    }
+
+    #firstSectionInfoParagraph {
+        font-size: calc(1.7rem + 1vw);
+        line-height: 4rem;
+    }
+
+    .firstSectionBtns{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5rem;
+    }
+
+    .firstSectionBtns a {
+        font-size: calc(1.9rem + 1vw);
+        text-align: center;
+        
+    }
+
+    #firstSectionText h1{
+        text-align: center;
+    }
+
+    .customersImgs {
+        flex-wrap: wrap;
+
+    }
+
+
+    header a {
+        font-size: 3.2rem;
+    }
+
+
+    .customersImgs img {
+        width: 7.4rem;
+        height: 7.4rem;
+        
+    }
+
+    .featured img {
+        height: 1.5rem;
+    }
+
+    #firstSectionImages {
+        align-self: center;
+        width: 100%;
+    }
+
+    .section1 {
+        width: 90%;
+    }
+
+    #firstSectionText {
+        width: 100%;
+        align-self: center;
+    }
+
+
+    #NumMeals {
+        font-size: 2rem;
+        margin-bottom: 5rem;
+        margin-top: 2.5rem;
+    }
+
+
+    .featured img {
+        height: 1.3rem;
+    }
+
+    #howItWorksTitle h2 {
+        
+        font-size: calc(1.3rem + 0.4vw);
+        text-align: center;
+        font-weight: 900;
+    }
+
+    .Apps{
+        gap: 8rem;
+    }
+
+    .Apps p {
+        margin-top: 3.5rem;
+        font-size: 2.4rem;
+        line-height: 4rem;
+    }
+
+    .Apps .child{
+        gap: 8rem;
+    }
+
+    .Apps .child .imageDiv {
+        width: 70%;
+        
+    }
+
+    .Apps .child div {
+        width: 100%;
+    }
+
+    .Apps .child img {
+        width: 55%;
+        height: auto;
+    }
+
+
+    .Apps .child:nth-child(2) .imageDiv {
+        /* position: relative; */
+        order: 0;
+    }
+
+
+    .meals h1
+     {
+        font-size: calc(3.1rem + 0.8vw);
+        width: 92%;
+        font-weight: 900;
+        margin: 0 auto;
+        margin-bottom: 11rem;
+        margin-top: 3rem;
+        text-align: center;
+        
+    }
+
+    .meals h3{
+        font-size: 2rem;
+        font-weight: 900;
+        margin: 0 auto;
+    }
+
+    .mealsContainer {
+        width: 92%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10rem;
+    }
+
+    #meals1, #meals2, #meals3 {
+        width: 100%;
+    }
+
+
+
+    .mealsContainer .vegetarian {
+        
+        font-size: calc(1.5rem + 0.4rem);
+        margin: 2rem 0rem;
+        margin-bottom: 3rem;
+    }
+
+    .mealCard {
+        padding: 5vw;
+    }
+
+    .mealsContainer p {
+        font-size: calc(2.25rem + 0.5vw);
+        display: inline-block;
+    }
+
+    .mealsContainer h2 {
+        font-size: calc(3.4rem + 0.5vw);
+        margin-bottom: 2.4rem;
+    }
+
+    #seeAllRecipes a{
+        margin-top: 9rem;
+        font-size: 3rem;
+    }
+
+
+    #meals3 h1 {
+        font-size: calc(3rem + 0.5vw);
+        text-align: center;
+    }
+
+
+    #meals3 p {
+        font-size: calc(2.1rem + 0.5vw);
+    }
+
+    .ionIconDiv{
+        display: flex;
+        width: 40%;
+        margin: 0 auto;
+        gap: 4rem;
+    }
+    #meals3 ion-icon {
+        font-size: calc(4.5rem + 0.5vw);
+    }
+
+}
+
